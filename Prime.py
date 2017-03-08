@@ -5,7 +5,7 @@ class Prime(object):
 
     def backwards(self, start, stop):
         to = stop + 1
-        maxBack = max(10000, to)
+        maxBack = (10 ** len(str(stop))) + 1
         map = list(range(0, maxBack))
 
         maxDelimiter = math.floor(math.sqrt(stop)) + 1
@@ -28,7 +28,7 @@ class Prime(object):
         backwards = []
         for prime in primes:
             reverse = int(str(prime)[::-1])
-            if map[reverse] > 0:
+            if reverse < maxBack and reverse != prime and map[reverse] > 0:
                 backwards.append(prime)
 
         backwards.sort()
