@@ -28,7 +28,9 @@ class Prime(object):
         for prime in primes:
             reverse = int(str(prime)[::-1])
             if map[reverse]:
-                print([prime, reverse])
+                backwards.append(prime)
 
+        backwards.sort()
+        return backwards
 
 
