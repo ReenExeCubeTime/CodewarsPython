@@ -1,4 +1,4 @@
 class Prime(object):
 
-    def fromRange(self, start, stop):
+    def between(self, start, stop):
         return None
