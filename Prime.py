@@ -5,16 +5,17 @@ class Prime(object):
 
     def backwards(self, start, stop):
         to = stop + 1
-        map = list(range(0, to))
+        maxBack = max(10000, to)
+        map = list(range(0, maxBack))
 
-        max = math.floor(math.sqrt(stop)) + 1
+        maxDelimiter = math.floor(math.sqrt(stop)) + 1
 
         delimiter = 2
 
-        while delimiter < max:
+        while delimiter < maxDelimiter:
             complex = delimiter
 
-            while complex < to:
+            while complex < maxBack:
                 map[complex] = 0
                 complex += delimiter
 
@@ -27,7 +28,7 @@ class Prime(object):
         backwards = []
         for prime in primes:
             reverse = int(str(prime)[::-1])
-            if reverse < to and map[reverse]:
+            if map[reverse] > 0:
                 backwards.append(prime)
 
         backwards.sort()
