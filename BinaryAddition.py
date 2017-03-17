@@ -1,4 +1,4 @@
 class BinaryAddition(object):
 
     def add(self, a, b):
-        pass
+        return "{0:b}".format(a + b)
