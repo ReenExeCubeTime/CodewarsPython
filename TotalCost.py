@@ -5,4 +5,4 @@ class TotalCost(object):
         for item in items:
             if item in costs:
                 sum += costs[item]
-        return sum + sum * tax
+        return round(sum + sum * tax, 2)
