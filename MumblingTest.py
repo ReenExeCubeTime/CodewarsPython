@@ -3,7 +3,7 @@ import unittest
 from Mumbling import Mumbling
 
 class MumblingTest(unittest.TestCase):
-    def testPrime(self):
+    def test(self):
         mumbling = Mumbling()
         self.assertEqual(mumbling.accum("ZpglnRxqenU"), "Z-Pp-Ggg-Llll-Nnnnn-Rrrrrr-Xxxxxxx-Qqqqqqqq-Eeeeeeeee-Nnnnnnnnnn-Uuuuuuuuuuu")
         self.assertEqual(mumbling.accum("NyffsGeyylB"), "N-Yy-Fff-Ffff-Sssss-Gggggg-Eeeeeee-Yyyyyyyy-Yyyyyyyyy-Llllllllll-Bbbbbbbbbbb")
