@@ -1,6 +1,3 @@
-import string
-
-
 class HighestAndLowest(object):
     def find(self, numbers):
         number_list = numbers.split(' ')
