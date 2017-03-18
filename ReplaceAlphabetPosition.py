@@ -1,15 +1,10 @@
-import string
-
-
 class ReplaceAlphabetPosition(object):
 
     def replace(self, text):
         result = []
-        letters = string.ascii_uppercase
         shift = ord("A") - 1
-        for letter in text:
-            letter = letter.upper()
-            if letter in letters:
-                result.append(str(ord(letter) - shift))
+        for letter in text :
+            if letter.isalpha():
+                result.append(str(ord(letter.upper()) - shift))
 
         return " ".join(result)
