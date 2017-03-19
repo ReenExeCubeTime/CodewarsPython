@@ -1,6 +1,7 @@
 class VowelCount(object):
     def get_count(self, inputStr):
-        num_vowels = 0
-        # your code here
-
-        return num_vowels
+        VOWELS = "aeiou"
+        count = 0
+        for vowel in VOWELS:
+            count += inputStr.count(vowel)
+        return count
