@@ -1,8 +1,11 @@
 class PersistentBugger(object):
     def persistence(self, n):
-        while n > 10:
-            digits = map(int, str(n).split(''))
+        if n < 10:
+            return 0
+
+        while n > 9:
+            digits = str(n)
             n = 1
             for digit in digits:
-                n *= digit
+                n *= int(digit)
         return n
